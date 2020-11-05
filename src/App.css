@@ -1,10 +1,7 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  min-height: 100vh;
+  background-color: #282c34;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,13 +11,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
   color: white;
 }
 
@@ -35,4 +26,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: white;
+}
+
+input {
+  padding: 0.6rem;
+  width: 300px;
+  margin-bottom: 1rem;
+}
+
+.add-review {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

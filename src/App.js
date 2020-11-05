@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <p
+          style={{
+            backgroundColor: "cornflowerblue",
+            marginTop: 0,
+            padding: "1rem",
+          }}
         >
-          Learn React
-        </a>
+          This is a demo for building a CRUD MySQL Node.js App tutorial. Still
+          in Progress. Tutorial will be available on lo-victoria.com
+        </p>
+        <h1>RavenBooks</h1>
       </header>
+      <h4>Add a review</h4>
+      <div className="add-review">
+        <input type="text" name="title" placeholder="Book Title" />
+
+        <input
+          type="number"
+          name="rating"
+          min="0"
+          max="5"
+          placeholder="Rating"
+        />
+        <input type="text" name="review" placeholder="Review" />
+        <button type="submit">Submit</button>
+      </div>
     </div>
   );
 }
