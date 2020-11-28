@@ -1,4 +1,5 @@
 import "./App.css";
+import logo from "./img/ravenclaw.png";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           This is a demo for building a CRUD MySQL Node.js App tutorial. Still
           in Progress. Tutorial will be available on lo-victoria.com
         </p>
-        <h1>RavenBooks</h1>
+        <img src={logo} style={{ width: "18rem" }} alt="" />
       </header>
       <h4>Add a review</h4>
       <div className="add-review">

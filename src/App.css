@@ -1,13 +1,7 @@
 .App {
   text-align: center;
   min-height: 100vh;
-  background-color: #282c34;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: #1e2b41;
 }
 
 .App-header {
@@ -49,4 +43,18 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+button {
+  cursor: pointer;
+  width: 8rem;
+  padding: 1rem 0rem;
+  font-size: 1rem;
+  background-color: cornflowerblue;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+}
+button:hover {
+  background-color: rgb(73, 119, 206);
 }
