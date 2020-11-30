@@ -45,7 +45,7 @@ input {
   align-items: center;
 }
 
-button {
+#btn {
   cursor: pointer;
   width: 8rem;
   padding: 1rem 0rem;
@@ -55,6 +55,21 @@ button {
   border: none;
   border-radius: 2rem;
 }
-button:hover {
+#btn:hover {
   background-color: rgb(73, 119, 206);
+}
+
+.del-btn {
+  cursor: pointer;
+  width: 8rem;
+  padding: 1rem 0rem;
+  font-size: 1rem;
+  background-color: rgb(237, 100, 100);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+}
+
+.del-btn:hover {
+  background-color: rgb(206, 73, 73);
 }

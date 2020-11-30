@@ -1,7 +1,24 @@
 import "./App.css";
+import { useState, useEffect } from "react";
 import logo from "./img/ravenclaw.png";
+import Add from "./Add";
+import Edit from "./Edit";
+import Delete from "./Delete";
+import axios from "axios";
 
 function App() {
+  const [reviews, setReviews] = useState([]);
+
+  const getReviews = () => {
+    axios.get("http://localhost:3000/reviews").then((res) => {
+      setReviews(res.data);
+    });
+  };
+
+  useEffect(() => {
+    getReviews();
+  }, [reviews]);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,20 +34,18 @@ function App() {
         </p>
         <img src={logo} style={{ width: "18rem" }} alt="" />
       </header>
-      <h4>Add a review</h4>
-      <div className="add-review">
-        <input type="text" name="title" placeholder="Book Title" />
-
-        <input
-          type="number"
-          name="rating"
-          min="0"
-          max="5"
-          placeholder="Rating"
-        />
-        <input type="text" name="review" placeholder="Review" />
-        <button type="submit">Submit</button>
-      </div>
+      {reviews.map((item) => {
+        return (
+          <div>
+            <h3>Title: {item.book_title}</h3>
+            <h3>Review: {item.book_review}</h3>
+            <h3>Rating: {item.book_rating}</h3>
+            <Edit id={item.id} reviews={reviews} setReviews={setReviews} />
+            <Delete id={item.id} reviews={reviews} setReviews={setReviews} />
+          </div>
+        );
+      })}
+      <Add reviews={reviews} setReviews={setReviews} />
     </div>
   );
 }
