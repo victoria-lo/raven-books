@@ -34,17 +34,20 @@ function App() {
         </p>
         <img src={logo} style={{ width: "18rem" }} alt="" />
       </header>
-      {reviews.map((item) => {
-        return (
-          <div>
-            <h3>Title: {item.book_title}</h3>
-            <h3>Review: {item.book_review}</h3>
-            <h3>Rating: {item.book_rating}</h3>
-            <Edit id={item.id} reviews={reviews} setReviews={setReviews} />
-            <Delete id={item.id} reviews={reviews} setReviews={setReviews} />
-          </div>
-        );
-      })}
+      <div className="reviews">
+        {reviews.map((item) => {
+          return (
+            <div className="review">
+              <h3>Title: {item.book_title}</h3>
+              <h3>Review: {item.book_review}</h3>
+              <h3>Rating: {item.book_rating}</h3>
+              <Edit id={item.id} reviews={reviews} setReviews={setReviews} />
+              <Delete id={item.id} reviews={reviews} setReviews={setReviews} />
+            </div>
+          );
+        })}
+      </div>
+
       <Add reviews={reviews} setReviews={setReviews} />
     </div>
   );

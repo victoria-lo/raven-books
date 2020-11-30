@@ -73,3 +73,13 @@ input {
 .del-btn:hover {
   background-color: rgb(206, 73, 73);
 }
+
+.review {
+  border: 1px solid grey;
+  width: fit-content;
+  padding: 1em;
+}
+
+.reviews {
+  display: flex;
+}
