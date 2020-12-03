@@ -11,10 +11,6 @@ app.use(cors());
 //serve react build files
 app.use(express.static(path.join(__dirname, "build")));
 
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
-
 //create connection to database
 const db = mysql.createPool({
   host: "us-cdbr-east-02.cleardb.com",
@@ -73,6 +69,10 @@ app.delete("/reviews/:id", (req, res) => {
       }
     }
   );
+});
+
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 const listener = app.listen(process.env.PORT || 3000, () => {
