@@ -11,7 +11,7 @@ export default function Add(props) {
   };
 
   const addReview = (data) => {
-    axios.post("http://localhost:3000/reviews", data).then(() => {
+    axios.post("https://ravenbooks.herokuapp.com/reviews", data).then(() => {
       props.setReviews([
         ...props.reviews,
         {
