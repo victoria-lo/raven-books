@@ -2,10 +2,18 @@ const express = require("express");
 const mysql = require("mysql");
 require("dotenv").config();
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 app.use(express.json()); // parses incoming requests with JSON payloads
 app.use(cors());
+
+//serve react build files
+app.use(express.static(path.join(__dirname, "build")));
+
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 //create connection to database
 const db = mysql.createPool({
