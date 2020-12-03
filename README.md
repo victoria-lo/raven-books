@@ -1,4 +1,4 @@
-# Ravenbooks
+<img src="https://github.com/victoria-lo/raven-books/blob/master/src/img/ravenclaw.png?raw=true" width="300" />
 
 ## About This Project
 This is a demo app to showcase how to build a React Express MySQL CRUD app and deploy it to Heroku.
