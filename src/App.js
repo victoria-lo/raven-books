@@ -34,6 +34,7 @@ function App() {
         </p>
         <img src={logo} style={{ width: "18rem" }} alt="" />
       </header>
+      <Add reviews={reviews} setReviews={setReviews} />
       <div className="reviews">
         {reviews.map((item) => {
           return (
@@ -47,8 +48,6 @@ function App() {
           );
         })}
       </div>
-
-      <Add reviews={reviews} setReviews={setReviews} />
     </div>
   );
 }
