@@ -9,10 +9,10 @@ app.use(cors());
 
 //create connection to database
 const db = mysql.createPool({
-  host: "localhost",
+  host: "us-cdbr-east-02.cleardb.com",
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
-  database: "ravenbooks",
+  database: "heroku_1902e02c992f7ca",
 });
 
 app.get("/reviews", (req, res) => {
