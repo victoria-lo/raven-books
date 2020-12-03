@@ -4,13 +4,15 @@ import axios from "axios";
 
 export default function Delete(props) {
   const deleteReview = () => {
-    axios.delete(`https://ravenbooks.herokuapp.com/${props.id}`).then((res) => {
-      props.setReviews(
-        props.reviews.filter((item) => {
-          return item.id !== props.id;
-        })
-      );
-    });
+    axios
+      .delete(`https://ravenbooks.herokuapp.com/reviews/${props.id}`)
+      .then((res) => {
+        props.setReviews(
+          props.reviews.filter((item) => {
+            return item.id !== props.id;
+          })
+        );
+      });
   };
 
   return (
