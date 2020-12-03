@@ -13,10 +13,10 @@ app.use(express.static(path.join(__dirname, "build")));
 
 //create connection to database
 const db = mysql.createPool({
-  host: "us-cdbr-east-02.cleardb.com",
+  host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
-  database: "heroku_1902e02c992f7ca",
+  database: process.env.DB,
 });
 
 app.get("/reviews", (req, res) => {
