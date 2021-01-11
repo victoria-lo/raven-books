@@ -5,7 +5,7 @@ This is a demo app to showcase how to build a React Express MySQL CRUD app and d
 
 The project can be found at https://ravenbooks.herokuapp.com
 
-> Tutorial COMING SOON to lo-victoria.com
+> Tutorial at https://hashnode.com/series/lets-build-a-mysql-nodejs-crud-app-ckhzrl98g022j99s11xymfqkn
 
 ### Book Review Table 📖
 | Column | Properties| Description
